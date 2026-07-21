@@ -1,0 +1,30 @@
+# Environment variables & secrets
+.env
+.env.*
+*.env
+*.env.local
+
+# Flutter / Dart build outputs
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+*.symbol-decl
+
+# Deno & Supabase Edge Function artifacts
+.deno/
+supabase/.temp/
+
+# IDE & Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating System files
+.DS_Store
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,11 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    always_declare_return_types: true
+    avoid_dynamic_calls: true
+    cancel_subscriptions: true
+    discarded_futures: true
+    prefer_single_quotes: true
+    public_member_api_docs: false
+    unawaited_futures: true
