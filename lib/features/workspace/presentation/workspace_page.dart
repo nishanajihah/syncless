@@ -152,15 +152,19 @@ class _WorkspacePageState extends ConsumerState<WorkspacePage> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.symmetric(vertical: 12),
-              color: const Color(0xFF0A0B0F),
+              padding: const EdgeInsets.symmetric(vertical: 20),
+              decoration: const BoxDecoration(
+                color: Color(0xFF0D0E14),
+                border: Border(top: BorderSide(color: Color(0xFF1E202C))),
+              ),
               alignment: Alignment.center,
               child: const Text(
-                '© 2026 Syncless | Built By Nisha Najihah',
+                '© 2026 Syncless  |  Built By Nisha Najihah',
                 style: TextStyle(
-                  color: Color(0xFF6A6F82),
-                  fontSize: 13,
-                  fontWeight: FontWeight.w500,
+                  color: Color(0xFFB5BACB),
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 0.3,
                 ),
               ),
             ),
@@ -240,7 +244,7 @@ class _WorkspacePageState extends ConsumerState<WorkspacePage> {
           mainAxisSize: MainAxisSize.min,
           children: [
             ListTile(
-              leading: const Icon(Icons.code_rounded, color: Color(0xFF9CA8FF)),
+              leading: const Icon(Icons.code_rounded, color: Color(0xFF00E5FF)),
               title: const Text('Export as Markdown (.md)', style: TextStyle(color: Colors.white)),
               subtitle: const Text('Standard Markdown format', style: TextStyle(color: Colors.grey)),
               onTap: () async {
@@ -345,7 +349,7 @@ class _TopBar extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     gradient: const LinearGradient(
-                      colors: [Color(0xFF9CA8FF), Color(0xFF6D5DF5)],
+                      colors: [Color(0xFF00E5FF), Color(0xFF0083B0)],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),
@@ -397,7 +401,7 @@ class _TopBar extends StatelessWidget {
                       ));
                     },
                     style: FilledButton.styleFrom(
-                      backgroundColor: const Color(0xFF7C6CFF),
+                      backgroundColor: const Color(0xFF00B4D8),
                       foregroundColor: Colors.white,
                       minimumSize: Size.zero,
                       padding: EdgeInsets.symmetric(horizontal: isVeryNarrow ? 12 : 16, vertical: 14),
@@ -408,7 +412,7 @@ class _TopBar extends StatelessWidget {
                   FilledButton(
                     onPressed: onUpgradePressed,
                     style: FilledButton.styleFrom(
-                      backgroundColor: const Color(0xFF7C6CFF),
+                      backgroundColor: const Color(0xFF00B4D8),
                       foregroundColor: Colors.white,
                       minimumSize: Size.zero,
                       padding: EdgeInsets.symmetric(horizontal: isVeryNarrow ? 12 : 16, vertical: 14),
@@ -526,17 +530,16 @@ class _ConversationPanel extends StatelessWidget {
 
             const Text(
               'Example Presets',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xFF9CA8FF)),
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xFF00E5FF)),
             ),
             const SizedBox(height: 10),
             _PresetBar(onPresetSelected: onPresetSelected),
             const SizedBox(height: 16),
             const Divider(color: Color(0xFF2A2D38), height: 1),
             const SizedBox(height: 16),
-
             const Text(
               'Select Output Format',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xFF9CA8FF)),
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xFF00E5FF)),
             ),
             const SizedBox(height: 10),
             _ModeSelector(selectedMode: selectedMode, onChanged: onModeChanged),
@@ -545,16 +548,15 @@ class _ConversationPanel extends StatelessWidget {
             const SizedBox(height: 16),
             const Divider(color: Color(0xFF2A2D38), height: 1),
             const SizedBox(height: 16),
-
             Row(
               children: [
                 const Text(
                   'Conversation Context',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xFF9CA8FF)),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xFF00E5FF)),
                 ),
                 const Spacer(),
                 IconButton(
-                  icon: const Icon(Icons.fullscreen_rounded, color: Color(0xFF9CA8FF), size: 22),
+                  icon: const Icon(Icons.fullscreen_rounded, color: Color(0xFF00E5FF), size: 22),
                   tooltip: 'Expand to Fullscreen Editor',
                   onPressed: () {
                     unawaited(showDialog<void>(
@@ -593,7 +595,7 @@ class _ConversationPanel extends StatelessWidget {
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
-                        borderSide: const BorderSide(color: Color(0xFF7C6CFF), width: 1.5),
+                        borderSide: const BorderSide(color: Color(0xFF00B4D8), width: 1.5),
                       ),
                     ),
                   ),
@@ -636,7 +638,7 @@ class _ConversationPanel extends StatelessWidget {
                       : const Icon(Icons.auto_awesome_rounded, size: 18),
                   label: Text(isGenerating ? 'Generating' : 'Generate'),
                   style: FilledButton.styleFrom(
-                    backgroundColor: const Color(0xFF7C6CFF),
+                    backgroundColor: const Color(0xFF00B4D8),
                     foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 15),
                   ),
@@ -670,7 +672,7 @@ class _PresetBar extends StatelessWidget {
         ),
         ...DemoPreset.presets.map(
           (preset) => ActionChip(
-            avatar: const Icon(Icons.chat_bubble_outline_rounded, size: 15, color: Color(0xFF9CA8FF)),
+            avatar: const Icon(Icons.chat_bubble_outline_rounded, size: 15, color: Color(0xFF00E5FF)),
             label: Text(preset.title),
             onPressed: () => onPresetSelected(preset),
             backgroundColor: const Color(0xFF161822),
@@ -700,11 +702,11 @@ class _ModeSelector extends StatelessWidget {
           label: Text(mode.label),
           selected: selected,
           onSelected: (_) => onChanged(mode),
-          selectedColor: const Color(0xFF302A67),
+          selectedColor: const Color(0xFF004B57),
           backgroundColor: const Color(0xFF161820),
-          side: BorderSide(color: selected ? const Color(0xFF8376FF) : const Color(0xFF2A2D38)),
+          side: BorderSide(color: selected ? const Color(0xFF00E5FF) : const Color(0xFF2A2D38)),
           labelStyle: TextStyle(
-            color: selected ? const Color(0xFFE4E1FF) : const Color(0xFFA5AABB),
+            color: selected ? const Color(0xFFE0FCFF) : const Color(0xFFA5AABB),
             fontWeight: selected ? FontWeight.w600 : FontWeight.w500,
             fontSize: 16,
           ),
@@ -906,7 +908,7 @@ class _InsightSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title, style: const TextStyle(color: Color(0xFFAFA9FF), fontSize: 14, fontWeight: FontWeight.w700)),
+          Text(title, style: const TextStyle(color: Color(0xFF80F3FF), fontSize: 14, fontWeight: FontWeight.w700)),
           const SizedBox(height: 8),
           ...items.map((item) => Padding(
                 padding: const EdgeInsets.only(bottom: 5),
@@ -934,7 +936,7 @@ class _UpgradeDialog extends StatelessWidget {
               color: const Color(0xFF6D5DF5).withAlpha(40),
               borderRadius: BorderRadius.circular(10),
             ),
-            child: const Icon(Icons.bolt_rounded, color: Color(0xFF9CA8FF)),
+            child: const Icon(Icons.bolt_rounded, color: Color(0xFF00E5FF)),
           ),
           const SizedBox(width: 12),
           const Text('Upgrade to Syncless Pro', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
@@ -988,7 +990,7 @@ class _UpgradeDialog extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 10),
       child: Row(
         children: [
-          const Icon(Icons.check_circle_rounded, color: Color(0xFF7C6CFF), size: 18),
+          const Icon(Icons.check_circle_rounded, color: Color(0xFF00B4D8), size: 18),
           const SizedBox(width: 10),
           Text(feature, style: const TextStyle(color: Color(0xFFE2E4EC), fontSize: 15)),
         ],
@@ -1074,7 +1076,7 @@ class _ModeDescription extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(icon, size: 20, color: const Color(0xFF9CA8FF)),
+          Icon(icon, size: 20, color: const Color(0xFF00E5FF)),
           const SizedBox(width: 10),
           Expanded(
             child: Column(
@@ -1234,7 +1236,7 @@ class _ExpandedEditorDialog extends StatelessWidget {
           children: [
             Row(
               children: [
-                const Icon(Icons.edit_note_rounded, color: Color(0xFF9CA8FF), size: 26),
+                const Icon(Icons.edit_note_rounded, color: Color(0xFF00E5FF), size: 26),
                 const SizedBox(width: 10),
                 const Text(
                   'Conversation Context Editor',
@@ -1274,7 +1276,7 @@ class _ExpandedEditorDialog extends StatelessWidget {
               child: FilledButton(
                 onPressed: () => Navigator.pop(context),
                 style: FilledButton.styleFrom(
-                  backgroundColor: const Color(0xFF7C6CFF),
+                  backgroundColor: const Color(0xFF00B4D8),
                   padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
                 ),
                 child: const Text('Done Editing', style: TextStyle(fontSize: 16)),

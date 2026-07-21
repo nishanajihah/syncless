@@ -15,7 +15,7 @@ class SynclessApp extends StatelessWidget {
         useMaterial3: true,
         brightness: Brightness.dark,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF7C8CFF),
+          seedColor: const Color(0xFF00B4D8),
           brightness: Brightness.dark,
         ),
       ),
