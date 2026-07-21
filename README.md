@@ -36,6 +36,7 @@ graph TD
 ```
 
 ### Stack Breakdown
+
 - **Frontend**: Flutter 3 (Web), Material 3 Dark First Theme, Riverpod 2 (Typed State Management).
 - **Backend & Storage**: Supabase Edge Functions (Deno 2 runtime), PostgreSQL 15, Row Level Security (RLS).
 - **AI Engine**: OpenAI GPT-5.6 Responses API using strict JSON Schema validation.
@@ -65,38 +66,48 @@ Syncless enforces security-by-design principles across all layers:
 ## 🚀 Getting Started
 
 ### 1. Prerequisites
+
 - **Flutter SDK**: `>=3.19.0`
 - **Deno / Supabase CLI**: Installed for Edge Function deployment
 - **Supabase Account**: A linked Supabase project
 
 ### 2. Environment Setup
+
 Create a `.env` file in the root directory:
+
 ```env
 SUPABASE_URL=https://your-project-id.supabase.co
 SUPABASE_ANON_KEY=your-supabase-anon-key
 ```
 
 ### 3. Database Migration
+
 Apply the database schema, RLS policies, and stored procedures:
+
 ```bash
 supabase link --project-ref your-project-id
 supabase db push
 ```
 
 ### 4. Edge Function Secrets & Deployment
+
 Set secrets on your Supabase project:
+
 ```bash
 supabase secrets set OPENAI_API_KEY="sk-proj-your-key"
 supabase secrets set SAFETY_IDENTIFIER_SALT="your-random-salt-string"
 ```
 
 Deploy the `generate-document` Edge Function:
+
 ```bash
 supabase functions deploy generate-document
 ```
 
 ### 5. Running the Web Application
+
 Run the Flutter web app locally:
+
 ```bash
 flutter run -d chrome --dart-define-from-file=.env
 ```
@@ -106,13 +117,19 @@ flutter run -d chrome --dart-define-from-file=.env
 ## 🧪 Verification & Static Analysis
 
 Ensure 100% clean static analysis and compilation before deployment:
+
 ```bash
 flutter analyze
 ```
 
-*Status: **0 Issues Found!***
+\*Status: **0 Issues Found!\***
 
 ---
 
 ## 📄 License
+
 Built for the **OpenAI Build Week Hackathon**. Distributed under the MIT License.
+
+## 📧 Contact
+
+- Email:[nishanajihah.dev@gmail.com]
