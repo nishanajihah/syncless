@@ -1,5 +1,13 @@
 # Syncless ⚡
 
+[![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
+[![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev)
+[![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com)
+[![Deno](https://img.shields.io/badge/Deno-000000?style=for-the-badge&logo=deno&logoColor=white)](https://deno.com)
+[![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://postgresql.org)
+[![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
 > **Turn Conversations into Execution.**
 >
 > Syncless is a high-performance AI document synthesis engine built for product managers, software engineers, and technical leaders. It transforms raw meeting transcripts, messy Slack threads, and unstructured notes into structured, executive-ready execution artifacts in seconds.
@@ -130,6 +138,9 @@ flutter analyze
 
 Built for the **OpenAI Build Week Hackathon**. Distributed under the MIT License.
 
-## 📧 Contact
+---
 
-- Email:[nishanajihah.dev@gmail.com]
+## 👤 Author & Contact
+
+- **Author**: Nisha Najihah
+- **Email**: [nishanajihah.dev@gmail.com](mailto:nishanajihah.dev@gmail.com)
